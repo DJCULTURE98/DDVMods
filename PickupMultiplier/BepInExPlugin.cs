@@ -41,7 +41,7 @@ namespace PickupMultiplier
             isDebug = Config.Bind<bool>("General", "IsDebug", true, "Enable debug logs");
             reverseToggle = Config.Bind<bool>("Options", "ReverseToggle", false, "If true, holding down the mod key turns off the behaviour instead.");
             modKey = Config.Bind<KeyCode>("Options", "ModKey", KeyCode.LeftShift, "Hold down this key to multiply");
-            pickupMultiplier = Config.Bind<int>("Options", "PickupMultiplier", 2, "Multiply picked up items by this amount");
+            pickupMultiplier = Config.Bind<int>("Options", "PickupMultiplier", 100, "Multiply picked up items by this amount");
 
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), null);
             Dbgl("mod loaded");
